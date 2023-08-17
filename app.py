@@ -2,7 +2,8 @@ import openai
 
 # Configure your OpenAI API key
 # openai.api_key = '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'
-openai.api_key = 'OPENAI_KEY'
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+
 
 @app.route('/get-response', methods=['POST'])
 def get_response():
